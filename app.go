@@ -5,7 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	// "log"
-	"github.com/Sunnylnwza007/golangTest/models/webhook"
+	"sunny/test-golang/models"
+	"github.com/fatih/color"
 )
 
 func handReq(){
@@ -35,10 +36,11 @@ func testJson(w http.ResponseWriter, r *http.Request) {
     }
 
     // Do something with the Person struct...
-    fmt.Fprintf(w, "Person: %+v", p.Events)
+    fmt.Fprintf(w, "Person: %+v", p.Events[0].Message)
 	
  }
 
  func main() {
+	color.Blue("%s \n", "Hello module 1")
 	handReq() 
 }
