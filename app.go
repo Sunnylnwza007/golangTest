@@ -27,7 +27,7 @@ func addHandler(w http.ResponseWriter, r *http.Request) {
 
 func testJson(w http.ResponseWriter, r *http.Request) {
 	var p models.Test
-	
+
     err := json.NewDecoder(r.Body).Decode(&p)
     if err != nil {
         http.Error(w, err.Error(), http.StatusBadRequest)
@@ -35,7 +35,7 @@ func testJson(w http.ResponseWriter, r *http.Request) {
     }
 
     // Do something with the Person struct...
-    fmt.Fprintf(w, "Person: %+v", p.Events[0].Message)
+    fmt.Fprintf(w, "Person: %+v", p.Events)
 	
  }
 
