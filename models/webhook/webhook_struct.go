@@ -24,6 +24,6 @@ type Message struct{
 	Type string `json:"type"`
 	Id string `json:"id"`
 	Address string `json:"address"`
-	Latitude string `json:"latitude"`
-	Longitude string `json:"longitude"`
+	Latitude float32 `json:"latitude"`
+	Longitude float32 `json:"longitude"`
 }
