@@ -1,7 +1,7 @@
 package models
 
 type Test struct {
-	Events []Event `json:"event"`
+	Events []Event `json:"events"`
 	Destination string `json:"destination"`
 }
 type Event struct{
@@ -18,8 +18,6 @@ type Source struct{
 	UserId string `json:"userId"`
 	Type string `json:"type"`
 	Address string `json:"address"`
-	Latitude float32 `json:"latitude"`
-	Longitude float32 `json:"longitude"`
 }
 
 type Message struct{
